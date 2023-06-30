@@ -1,18 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import NavBar from './Components/Navbar/NavBar'
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
-import Carrito from './Components/Carrito/Carrito'
+import Home from "./Components/Home/Home"
+import Menu from "./Components/Menu/Menu"
+import Tienda from "./Components/Tienda/Tienda"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => {
   return (
     <>
-      <NavBar />
-      <ItemListContainer Bienvenida={'Bienvenidos a nuestra tienda'}/>
+    <Menu/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element ={<Home/>} />
+        <Route path='/Tienda' element ={<Tienda/>} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }

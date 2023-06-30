@@ -7,10 +7,9 @@ const NavBar = ()=> {
             <div>
                 <button>Inicio</button>
                 <button>Nosotros</button>
-                <button>Ahumadores</button>
-                <button>Parrilleros</button>
-                <button>Utensillos</button>
-                <button>Insumos</button>
+                <button>Tienda</button>
+                <button>Contacto</button>
+
             </div>
             <Carrito/>
         </nav>
