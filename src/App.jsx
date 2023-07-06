@@ -7,8 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 const App = () => {
   return (
     <>
-    <Menu/>
     <BrowserRouter>
+      <Menu/>
       <Routes>
         <Route path="/" element ={<Home/>} />
         <Route path='/Tienda' element ={<Tienda/>} />

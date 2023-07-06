@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Categorias =() =>{
 
@@ -14,7 +15,7 @@ const Categorias =() =>{
     return (
         <div>
             <h2>Categorias</h2>
-            <button onClick={()=> handleClick ("Ahumadores")}>Ahumadores</button>
+            <NavLink to={"/Tienda/Ahumadores"}><button onClick={()=> handleClick ("Ahumadores")}>Ahumadores</button></NavLink>
             <button onClick={()=> handleClick ("Parrilleros")}>Parrilleros</button>
             <button onClick={()=> handleClick ("Utensillos")}>Utensillos</button>
             <button onClick={()=> handleClick ("Insumos")}>Insumos</button>
