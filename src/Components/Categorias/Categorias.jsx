@@ -20,6 +20,8 @@ const Categorias =() =>{
             <button onClick={()=> handleClick ("Utensillos")}>Utensillos</button>
             <button onClick={()=> handleClick ("Insumos")}>Insumos</button>
 
+            
+
         </div>
     )
 }
