@@ -22,7 +22,7 @@ const Producto = () => {
 
   return (
     <div>
-      <h1>All Products</h1>
+      <h1>Todos los productos</h1>
       {ALL_PRODUCTS.map((item, index) => (
         <ProductoItem
         // name={
