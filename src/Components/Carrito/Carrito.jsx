@@ -1,19 +1,23 @@
-import { useRef } from "react"
+import React from 'react';
 
-const Carrito =() => {
-    
-    const productos = useRef(0);
+const Carrito = ({ itemsCarrito }) => {
+  return (
+    <div className="cart">
+      <h2>Carrito de compras</h2>
+      {itemsCarrito.length === 0 ? (
+        <p>No hay elementos en el carrito.</p>
+      ) : (
+        <ul>
+          {itemsCarrito.map((item, index) => (
+            <li key={index}>
+              {item.name} - ${item.price}
+            </li>
+          ))}
+        </ul>
+      )}
+      {/* Falta boton para finalizar compra */}
+    </div>
+  );
+};
 
-    const agregarcart = () => {
-        productos.current = productos.current + 1;
-
-    }
-    return (
-        <div>
-            <p>Productos en el carrito</p>
-            <button onClick={agregarcart}>Agregar al carrito</button>
-        </div>
-    )
-}
-
-export default Carrito
+export default Carrito;

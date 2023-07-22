@@ -15,7 +15,7 @@ const Categorias =() =>{
     return (
         <div>
             <h2>Categorias</h2>
-            <NavLink to={"/Tienda/Ahumadores"}><button onClick={()=> handleClick ("Ahumadores")}>Ahumadores</button></NavLink>
+            {/* <NavLink to={"/Tienda/Ahumadores"}>*/}<button onClick={()=> handleClick ("Ahumadores")}>Ahumadores</button>{/*</NavLink> */}
             <button onClick={()=> handleClick ("Parrilleros")}>Parrilleros</button>
             <button onClick={()=> handleClick ("Utensillos")}>Utensillos</button>
             <button onClick={()=> handleClick ("Insumos")}>Insumos</button>

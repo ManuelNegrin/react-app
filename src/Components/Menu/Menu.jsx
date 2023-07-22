@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom"
+import Carrito from "../Carrito/Carrito"
 
-const menu = () => {
+const menu = ({ cartItemsCount }) => {
   return (
     <header>
         <Link to={"/"}>
@@ -27,6 +28,9 @@ const menu = () => {
                     <NavLink to={"/Contacto"}>
                         Contacto
                     </NavLink>
+                </li>
+                <li>
+                    <Link to="/Carrito">Carrito ({cartItemsCount})</Link>
                 </li>
             </ul>
         </nav>
