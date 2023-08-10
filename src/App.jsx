@@ -6,7 +6,7 @@ import Nosotros from "./Components/Nosotros/Nosotros"
 import Tienda from "./Components/Tienda/Tienda"
 import Carrito from "./Components/Carrito/Carrito"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-
+import ContextoCarrito from './Components/ContextoCarrito';
 
 const App = () => {
 
@@ -19,13 +19,15 @@ const App = () => {
   return (
     <header>
       <BrowserRouter>
-        <Menu cartItemsCount={itemsCarrito.length}/>
-        <Routes>
-          <Route path="/" element ={<Home/>} />
-          <Route path='/Tienda' element ={<Tienda/>} />
-          <Route path="/Nosotros" element ={<Nosotros/>}/>
-          <Route path="/Contacto" element ={<Contacto/>}/>
-        </Routes>
+        <ContextoCarrito.Provider value={{ itemsCarrito, agregarAlCarrito }}>
+          <Menu/>
+          <Routes>
+            <Route path="/" element ={<Home/>} />
+            <Route path='/Tienda' element ={<Tienda/>} />
+            <Route path="/Nosotros" element ={<Nosotros/>}/>
+            <Route path="/Contacto" element ={<Contacto/>}/>
+          </Routes>
+        </ContextoCarrito.Provider>
         {/* <Carrito itemsCarrito={itemsCarrito} /> */}
       </BrowserRouter>
     </header>

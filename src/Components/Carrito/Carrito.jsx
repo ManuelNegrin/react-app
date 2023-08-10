@@ -1,6 +1,10 @@
 import React from 'react';
+import ContextoCarrito from '../ContextoCarrito';
 
-const Carrito = ({ itemsCarrito }) => {
+const Carrito = () => {
+  
+  const { itemsCarrito } = useContext(ContextoCarrito)
+  
   return (
     <div className="cart">
       <h2>Carrito de compras</h2>
